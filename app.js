@@ -1,16 +1,15 @@
-//jshint esversion:6
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 var _ = require("lodash");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 mongoose.set("strictQuery", false);
 
 // mongoose.connect("mongodb://127.0.0.1:27017/blogDB", {useNewUrlParser: true});
 
-mongoose.connect('mongodb+srv://admin-shundar:Winter1929@cluster0.s17qzvx.mongodb.net/blogDB').
+mongoose.connect(process.env.MONGO_PASS).
     catch(error => handleError(error));
 
 const postSchema = {
