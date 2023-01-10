@@ -31,5 +31,9 @@
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
-  color: #fff;
+    color: #fff;
+}
+
+h1 {
+    word-wrap: break-word;
 }
